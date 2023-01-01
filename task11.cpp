@@ -1,18 +1,9 @@
-#include <iostream> 
-using namespace std;
-int main ()
+#include<iostream>
+using namespace std ;
+main()
 {
-int num1;
-cout << " enter the speed of the car " ;
-cin >> num1 ;
-if (num1 == 100 )
+while(true)
 {
-cout << "PERfect !you're going good ";
-}
-if (num1 == 105 )
-{
-cout << "HALT ... YOU WILL BE CHALLANGED!!!!!";
+cout << " my is marsad " ;
 } 
-
-return 0;
 }

@@ -1,19 +1,24 @@
 #include <iostream>
-#include <windows.h>
 using namespace std;
-void gotoxy(int x ,int y)
-{
-COORD coordinates;
-coordinates . X = x ;
-coordinates . Y = y ;
-SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coordinates);
-}
-
+void add (); 
 int main ()
 {
-system("cls");
-cout << "test";
-gotoxy(15,15);
-cout << "MY NAME IS MARSAD";
-return 0;
+
+add();
+add();
+
+return 0 ;
 }
+
+void add ()
+{
+int number1;
+cout << " enter your first number : " ;
+cin >> number1 ;
+int number2;
+cout << " enter your second number : " ;
+cin >> number2;
+int sum ;
+sum = number1 + number2 ;
+cout << " the sum of two number : " << sum ;
+}   
