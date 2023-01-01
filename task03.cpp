@@ -1,18 +1,42 @@
-#include <iostream>
-using namespace std;
-int main ()
+#include<iostream>
+#include<windows.h>
+using namespace std ;
+
+void gotoxy (int , int);
+void printMaze();
+void playerMove(int x, int y );
+main ()
 {
-int num;
-cout << " enter your number  : " ;
-cin >> num ;
-if(num >=50) 
+     system("cls");
+     printMaze();
+     int x = 3;
+     int y = 3;
+     playerMove(x,y);
+} 
+void printMaze()
 {
-cout << "pass " ;
+cout << "###################################" << endl;
+cout << "#                                 #" << endl;
+cout << "#                                 #" << endl;
+cout << "#                                 #" << endl;
+cout << "#                                 #" << endl;
+cout << "#                                 #" << endl;
+cout << "#                                 #" << endl;
+cout << "#                                 #" << endl;
+cout << "###################################" << endl;
 }
-else 
-{}
-
-
-return 0;
+void gotoxy(int x,int y)
+{
+COORD coordinates;
+coordinates.X = x;
+coordinates.Y = y;
+SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coordinates);
 }
-
+void playerMove(int x,int y)
+{
+        gotoxy(x-1 , y);
+        cout << " ";
+        gotoxy(x, y);
+        cout << "p";
+        Sleep(200);
+}

@@ -1,19 +1,64 @@
-#include <iostream>
-using namespace std;
-int main ()
-{
-int num ;
-cout << " enter your number : " ;
-cin >> num ;
+#include<iostream>
+#include<windows.h>
+using namespace std ;
 
-if (num%2 == 0) 
+void gotoxy (int , int);
+void printMaze();
+void playerMove(int x, int y );
+  main()
 {
-cout << " the number is even " ;
-}
-else 
-{
-cout << "the number is odd " ;
-}
-
-return 0;
+     system("cls");
+     printMaze();
+     int x = 3;
+     int y = 3;
+     playerMove(x,y);
 } 
+void printMaze()
+{
+cout << "###################################" << endl;
+cout << "#                                 #" << endl;
+cout << "#                                 #" << endl;
+cout << "#                                 #" << endl;
+cout << "#                                 #" << endl;
+cout << "#                                 #" << endl;
+cout << "#                                 #" << endl;
+cout << "#                                 #" << endl;
+cout << "###################################" << endl;
+}
+void gotoxy(int x,int y)
+{
+COORD coordinates;
+coordinates.X = x;
+coordinates.Y = y;
+SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coordinates);
+}
+void playerMove(int x,int y)
+{
+        gotoxy(x-1 , y);
+        cout << " ";
+        gotoxy(x, y);
+        cout << "p";
+        Sleep(200);
+   main();
+ {
+   system("cls");
+   printMaze();
+   int x = 3;
+   int y = 3;
+   while(true) 
+  {
+    playerMove(x,y);
+    if (x < 200)
+    {
+       x = x + 1;
+    }
+     if(x == 20)
+       {
+         gotoxy(x-1,y);
+         cout << " ";
+         x = 3;
+       }
+  }
+ }
+}
+ 
