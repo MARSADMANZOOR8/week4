@@ -1,22 +1,34 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
-int main ()
+void gotoxy (int x , int y)
 {
-int num1;
-cout << "enter your first number : " ;
-cin >> num1;
-int num2;
-cout << " enter your second number : ";
-cin >> num2;
-
-if (num1 > num2 )
-{
-cout << "the greatest number is " << num1 ;
+  COORD coordinates;
+  coordinates.X = x ;
+  coordinates.Y = y ;
+  SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coordinates);
 }
-else
-{
-cout << "the greatest number is " << num2 ;
-}
+   
 
-return 0;
-} 
+  int main()
+  {
+     system("cls");
+     cout << "Test"; 
+     
+
+     gotoxy(15,15);
+                       cout << "##     ##        ##        ######       ####           ##        ####     " << endl;
+     gotoxy(16,16);
+                       cout << "# #   # #      ##  ##      #    #      #             ##  ##      ##  #    " << endl;
+     gotoxy(17,17);
+                       cout << "#   #   #     ##    ##     #    #       #           ##    ##     ##   #   " << endl;
+     gotoxy(18,18);
+                       cout << "#       #    ##########    ######         #        ##########    ##    #  " << endl;
+     gotoxy(18,18);
+                       cout << "#       #   ##        ##   ##               #     ##        ##   ##    #  " << endl;
+     gotoxy(19,19);
+                       cout << "#       #  ##          ##  #  #              #   ##          ##  ##    #  " << endl;
+     gotoxy(19,19);
+                       cout << "#       # ##            ## #    #       #####   ##            ## ######   " << endl;
+     return 0;
+   }

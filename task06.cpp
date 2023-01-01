@@ -1,24 +1,50 @@
 #include <iostream>
-using namespace std;
+using namespace std ;
+ 
+void printa();
+void printw();
+void printi();
+void prints();
 int main ()
 {
-string name ;
-cout << "today is : " ;
-cin >> name ;
-int amount ;
-cout << " total purchase amount is : " ;
-cin >> amount ;
-float discount ;
-discount = amount - amount * 0.10 ;
-cout << " the actual amount is " ;
+ printa();
+ printw();
+ printa();
+ printi();
+ prints();
+}
+void printa()
+{
+cout << "      #     " << endl ;
+cout << "     # #    " << endl ;
+cout << "    #####   " << endl ;
+cout << "   #     #  " << endl ;
+cout << "  #       # " << endl ;
+}
+void printw()
+{
+cout << "  #       # " << endl ;
+cout << "  #   #   # " << endl ;
+cout << "  #  # #  # " << endl ;
+cout << "  # #   # # " << endl ;
+cout << "  ###   ### " << endl ;
+}
 
-if (name == "sunday" )
+void printi()
 {
-cout << " the payable amount is " << discount ; 
+cout << "   #######  " << endl ;
+cout << "      #     " << endl ;
+cout << "      #     " << endl ;
+cout << "      #     " << endl ;
+cout << "      #     " << endl ;
+cout << "   #######  " << endl ;
 }
-else 
+void prints()
 {
-cout << " the totlal payable amount is " << amount ;
-}
-return 0 ;
+cout << "    #####   " << endl ;
+cout << "    #       " << endl ;
+cout << "     #      " << endl ;
+cout << "      #     " << endl ;
+cout << "       #    " << endl ;
+cout << "    #####   " << endl ;
 }

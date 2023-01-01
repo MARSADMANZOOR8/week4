@@ -1,25 +1,18 @@
 #include <iostream> 
 using namespace std;
-int main()
+int main ()
 {
-string day ;
-int total ;
-int payable ;
-while (true)
+string name ;
+cout << " enter name " ;
+cin >> name ;
+if (name == "true")
 {
-cout << " enter the day : " ;
-cin >> day ;
-cout << " enter the total amount : " ;
-cin >> total ;
-if (day == "sunday")
+cout << " FALSE " ;
+}
+if (name == "false")
 {
-payable = total - total * .10;
-cout << " the payable amount is " << payable ;
+cout << " TRUE " ;
 }
-else
-{ 
-payable = total - total *.5 ;
-}
-}
+
 return 0;
 }
